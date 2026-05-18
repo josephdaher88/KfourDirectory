@@ -608,7 +608,7 @@ export default function KfourDirectory() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-x-hidden">
       {/* Header */}
       <header className="sticky top-0 z-20 bg-white/80 backdrop-blur-xl border-b border-slate-200/60 shadow-sm">
         <div className="max-w-2xl mx-auto px-4 py-4">
@@ -661,12 +661,12 @@ export default function KfourDirectory() {
             {filtered.map((contact, i) => (
               <div
                 key={i}
-                className="bg-white rounded-3xl shadow-sm border border-slate-100 p-4 flex items-center gap-4 hover:shadow-md hover:border-slate-200 transition-all duration-200 active:scale-[0.99]"
+                className="bg-white rounded-2xl shadow-sm border border-slate-100 p-3 flex items-center gap-3 hover:shadow-md hover:border-slate-200 transition-all duration-200 active:scale-[0.99]"
                 style={{ animationDelay: `${Math.min(i * 20, 200)}ms` }}
               >
                 {/* Avatar */}
                 <div
-                  className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${getColor(contact.name)} flex items-center justify-center flex-shrink-0 shadow-sm`}
+                  className={`w-10 h-10 rounded-xl bg-gradient-to-br ${getColor(contact.name)} flex items-center justify-center flex-shrink-0 shadow-sm`}
                 >
                   <span className="text-white font-bold text-sm">
                     {getInitials(contact.name)}
@@ -683,23 +683,22 @@ export default function KfourDirectory() {
                   </p>
                 </div>
 
-                {/* Buttons */}
-                <div className="flex gap-2 flex-shrink-0">
+                <div className="flex gap-1.5 flex-shrink-0">
                   <a
                     href={`tel:+${contact.phone}`}
-                    className="w-10 h-10 rounded-2xl bg-blue-500 hover:bg-blue-600 active:bg-blue-700 flex items-center justify-center shadow-sm shadow-blue-200 transition-colors duration-150"
+                    className="w-9 h-9 rounded-xl bg-blue-500 hover:bg-blue-600 active:bg-blue-700 flex items-center justify-center shadow-sm shadow-blue-200 transition-colors duration-150"
                     title="Call"
                   >
-                    <Phone size={16} className="text-white" />
+                    <Phone size={15} className="text-white" />
                   </a>
                   <a
                     href={`https://wa.me/${contact.phone}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-2xl bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 flex items-center justify-center shadow-sm shadow-emerald-200 transition-colors duration-150"
+                    className="w-9 h-9 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 flex items-center justify-center shadow-sm shadow-emerald-200 transition-colors duration-150"
                     title="WhatsApp"
                   >
-                    <MessageCircle size={16} className="text-white" />
+                    <MessageCircle size={15} className="text-white" />
                   </a>
                 </div>
               </div>
