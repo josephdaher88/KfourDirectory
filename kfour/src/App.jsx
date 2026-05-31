@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
-import { Phone, MessageCircle, Search, Users } from "lucide-react";
-
+import { Phone, MessageCircle, Search } from "lucide-react";
+import logo from "./assets/kfourLogo.jpeg";
 const contacts = [
   { name: "Abboud Badih Moussa", phone: "9613768977" },
   { name: "Abboud Semaan Merheb", phone: "9613173789" },
@@ -613,9 +613,16 @@ export default function KfourDirectory() {
       <header className="sticky top-0 z-20 bg-white/80 backdrop-blur-xl border-b border-slate-200/60 shadow-sm">
         <div className="max-w-2xl mx-auto px-4 py-4">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-200">
-              <Users size={20} className="text-white" />
-            </div>
+       {/* /* <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-200">
+          <Users size={20} className="text-white" />
+        </div> */ }
+            <div className="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-amber-200 bg-black flex items-center justify-center">
+  <img
+    src={logo}
+    alt="Kfour Directory Logo"
+    className="w-full h-full object-cover"
+  />
+</div>
             <div>
               <h1 className="text-xl font-bold text-slate-800 leading-tight tracking-tight">
                 Kfour Al Arbi
